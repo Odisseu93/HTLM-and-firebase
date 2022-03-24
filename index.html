@@ -1,28 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
   <title>Formulário integrado com o fire base</title>
 </head>
+
 <body>
   <main>
     <form>
-      <label>
-        Nome:
-        <input type="text" placeholder="Digite o seu e-mail">
-      </label>
-      <label >
-        Email:
-        <input type="email" placeholder="Digite o seu e-mail">
-      </label>
-      <label >
-        Mensagem:
-        <textarea id="txtDescricao" rows="10" cols="50"
-        placeholder="Digite alguma Mensagem"></textarea><br>
-      </label>
-      <input type="submit">
+      <div class="lblAndInput">
+        <label>
+          Nome:
+          <input type="text" placeholder="Digite o seu e-mail" class="inp" id="inpName">
+        </label>
+      </div>
+      <div class="lblAndInput">
+        <label>
+          Email:
+          <input type="email" placeholder="Digite o seu e-mail" class="inp" id="inpEmail">
+        </label>
+      </div>
+      <div class="lblAndInput">
+        <label>
+          Mensagem:
+          <textarea id="txtDescricao" rows="10" cols="50" placeholder="Digite alguma Mensagem" class="inp" id="inpMsg"></textarea><br>
+        </label>
+      </div>
+      <input type="submit" id="btnSub">
     </form>
   </main>
 </body>

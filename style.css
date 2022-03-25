@@ -1,5 +1,7 @@
 
-
+body {
+  background: #FFB4A6;
+}
 main {
   display: flex;
   height: 45em;

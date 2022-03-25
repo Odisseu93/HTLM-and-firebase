@@ -11,3 +11,35 @@ const firebaseConfig = {
 
 //iniciando o servidor Firebase
 firebase.initializeApp(firebaseConfig);
+var firebase = firebase.firestore();
+
+
+//declarando uma variável para a coleção no banco de dados
+const dataBase = firebase.collection("baseDeDados");
+
+
+//ArrowFunciton para os btn submit
+document.addEventListener("click",(e)=>{
+
+//armazenado os valores dos inputs em váriváveis 
+let nome = document.getElementById("inpName").value;
+let email = document.getElementById("inpEmail").value;
+let msg = document.getElementById("inpMsg").value;
+
+
+// if (nome==""||email==""||msg==""){
+// alert("Preencha todos os campos!")
+// e.preventDefault();
+// }
+
+/*
+inserido dados no banco de dados 
+  Atributo: valor
+*/
+dataBase.doc().set({
+  name: nome,
+  email: email,
+  message: msg
+})
+  
+})

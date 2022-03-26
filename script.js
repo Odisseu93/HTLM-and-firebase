@@ -19,27 +19,34 @@ const dataBase = firebase.collection("baseDeDados");
 
 
 //ArrowFunciton para os btn submit
-document.addEventListener("click",(e)=>{
+// const btnSub = document.getElementById("btnSub");
+const btnSub = document.getElementById("btnSub").addEventListener("click", () =>{
 
-//armazenado os valores dos inputs em váriváveis 
-let nome = document.getElementById("inpName").value;
-let email = document.getElementById("inpEmail").value;
-let msg = document.getElementById("inpMsg").value;
+  //armazenado os valores dos inputs em váriváveis 
+  let nome = document.getElementById("inpName")
+  let email = document.getElementById("inpEmail");
+  let msg = document.getElementById("inpMsg");
 
 
-// if (nome==""||email==""||msg==""){
-// alert("Preencha todos os campos!")
-// e.preventDefault();
-// }
+  if (nome == "" || email == "" || msg == "") {
+    alert("Preencha todos os campos!");
+    preventDefault();
+  }
+  /*
+  inserido dados no banco de dados 
+    Atributo: valor
+  */
+  dataBase.doc().set({
+    name: nome.value,
+    email: email.value,
+    message: msg.value
+  })
 
-/*
-inserido dados no banco de dados 
-  Atributo: valor
-*/
-dataBase.doc().set({
-  name: nome,
-  email: email,
-  message: msg
-})
-  
+  /*
+  recarregando a página depois de 0,5 segundos
+  https://www.positioniseverything.net/javascript-wait-5-seconds
+  */
+  setTimeout(()=>   window.location.reload() ,500);
+
+
 })

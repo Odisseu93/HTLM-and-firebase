@@ -28,15 +28,15 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
   let msg = document.getElementById("inpMsg");
 
 
-  if (nome == "" || email == "" || msg == "") {
+  if (nome.value == "" || email.value == "" || msg.value == "") {
     alert("Preencha todos os campos!");
     preventDefault();
   }
 
   //limitando o número de caracteres da mensagem
-  const maxlength = 100;
-  if (msg.value.length >= maxlength) {
-    alert("A mensagem ter até 100 caracteres");
+  const maxlength = 20;
+  if (msg.value.length > maxlength) {
+    alert("A mensagem pode ter até ter até 20 caracteres");
     preventDefault();
   }
   /*
@@ -53,7 +53,7 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
   recarregando a página depois de 0,5 segundos
   https://www.positioniseverything.net/javascript-wait-5-seconds
   */
-  setTimeout(() => window.location.reload(), 1000);
+  setTimeout(() => window.location.reload(), 2000);
 
 })
 
@@ -68,10 +68,11 @@ function addItemDV(doc) {
   let msg = document.createElement('span');
 
 
-  iddoc.innerHTML = "ID: " + doc.id + "<br>";
-  name.innerHTML = "Nome: " + doc.data().name + '<br>';
-  email.innerHTML = "E-mail: " + doc.data().email + '<br>';
-  msg.innerHTML = "Mensagem: " + doc.data().message + '<br>';
+  iddoc.innerHTML = "<h2>ID</h2> " + doc.id + "<br><br>";
+  name.innerHTML = "<h2>Nome</h2> " + doc.data().name + '<br><br>';
+  email.innerHTML = "<h2>E-mail</h2> " + doc.data().email + '<br><br>';
+  msg.innerHTML = "<h2>Mensagem</h2> " + doc.data().message + '<br><br>';
+
 
   list.setAttribute(`data-id`, doc.id);
   list.setAttribute(`class`, "listItens");

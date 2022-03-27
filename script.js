@@ -35,7 +35,7 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
 
   //limitando o número de caracteres da mensagem
   const maxlength = 100;
-  if(msg.value.length >= maxlength){
+  if (msg.value.length >= maxlength) {
     alert("A mensagem ter até 100 caracteres");
     preventDefault();
   }
@@ -59,18 +59,23 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
 
 //criando elementos no html para exibir os dados
 const completedList = document.querySelector("#all-list");
-function addItemDV(doc){
+function addItemDV(doc) {
   //criando os elementos
   let list = document.createElement('li');
+  let iddoc = document.createElement('span');
   let name = document.createElement('span');
   let email = document.createElement('span');
   let msg = document.createElement('span');
 
-  name.innerHTML  = "Nome: " + doc.data().name + '<br>';
-  email.innerHTML = "E-mail: " + doc.data().email+ '<br>';
+
+  iddoc.innerHTML = "ID: " + doc.id + "<br>";
+  name.innerHTML = "Nome: " + doc.data().name + '<br>';
+  email.innerHTML = "E-mail: " + doc.data().email + '<br>';
   msg.innerHTML = "Mensagem: " + doc.data().message + '<br>';
-  
+
   list.setAttribute(`data-id`, doc.id);
+  list.setAttribute(`class`, "listItens");
+  list.appendChild(iddoc);
   list.appendChild(name);
   list.appendChild(email);
   list.appendChild(msg);
@@ -79,11 +84,11 @@ function addItemDV(doc){
 }
 
 
- const viewData = firebase.collection("baseDeDados").get().then((snapshot) => {
-    snapshot.docs.forEach((doc) => {
-      addItemDV(doc);
-    });
+const viewData = firebase.collection("baseDeDados").get().then((snapshot) => {
+  snapshot.docs.forEach((doc) => {
+    addItemDV(doc);
   });
+});
 
 /*
 teste contagem de  de caracteres no textArea

@@ -33,6 +33,7 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
     preventDefault();
   }
 
+  //limitando o número de caracteres da mensagem
   const maxlength = 100;
   if(msg.value.length >= maxlength){
     alert("A mensagem ter até 100 caracteres");
@@ -56,8 +57,54 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
 
 })
 
-//teste contagem de  de caracteres no textArea
-// const txtArea = document.getElementById("inpMsg");
+//criando elementos no html para exibir os dados
+const completedList = document.querySelector("#all-list");
+function addItemDV(doc){
+  //criando os elementos
+  let list = document.createElement('li');
+  let name = document.createElement('span');
+  let email = document.createElement('span');
+  let msg = document.createElement('span');
 
-// txtArea.textContent = "123456789";
-// console.log(txtArea.value.length);
+  name.innerHTML  = "Nome: " + doc.data().name + '<br>';
+  email.innerHTML = "E-mail: " + doc.data().email+ '<br>';
+  msg.innerHTML = "Mensagem: " + doc.data().message + '<br>';
+  
+  list.setAttribute(`data-id`, doc.id);
+  list.appendChild(name);
+  list.appendChild(email);
+  list.appendChild(msg);
+
+  completedList.appendChild(list);
+}
+
+
+ const viewData = firebase.collection("baseDeDados").get().then((snapshot) => {
+    snapshot.docs.forEach((doc) => {
+      addItemDV(doc);
+    });
+  });
+
+/*
+teste contagem de  de caracteres no textArea
+const txtArea = document.getElementById("inpMsg");
+
+txtArea.textContent = "123456789";
+console.log(txtArea.value.length);
+*/
+
+/*
+testes de visualização de dados
+#1º teste
+firebase.collection("baseDeDados").get().then((snapshot) => {
+      console.log(snapshot.docs);
+  });
+
+#2º teste
+const viewData = firebase.collection("baseDeDados").get().then((snapshot) => {
+  snapshot.docs.forEach((doc) => {
+    console.log(doc.data());
+  });
+});
+*/
+

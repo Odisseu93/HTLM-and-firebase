@@ -32,6 +32,12 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
     alert("Preencha todos os campos!");
     preventDefault();
   }
+
+  const maxlength = 100;
+  if(msg.value.length >= maxlength){
+    alert("A mensagem ter até 100 caracteres");
+    preventDefault();
+  }
   /*
   inserido dados no banco de dados 
     Atributo: valor
@@ -46,6 +52,12 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
   recarregando a página depois de 0,5 segundos
   https://www.positioniseverything.net/javascript-wait-5-seconds
   */
-  setTimeout(() => window.location.reload(), 500);
+  setTimeout(() => window.location.reload(), 1000);
 
 })
+
+//teste contagem de  de caracteres no textArea
+// const txtArea = document.getElementById("inpMsg");
+
+// txtArea.textContent = "123456789";
+// console.log(txtArea.value.length);

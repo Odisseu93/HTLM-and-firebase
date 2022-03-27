@@ -1,33 +1,35 @@
+@media(min-width: 320px) and (max-width: 425px) {
+  body {
+    background: #FFB4A6;
+  }
 
-body {
-  background: #FFB4A6;
-}
-main {
-  display: flex;
-  height: 45em;
-  flex-direction: column;
-  justify-content: space-around;
-}
+  main {
+    display: flex;
+    height: 45em;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 
-.lblAndInput{
-  margin: 1em;
-  text-align: left;
-}
+  .lblAndInput {
+    margin: 1em;
+    text-align: left;
+  }
 
-.inp{
-  width: 90%;
-}
+  .inp {
+    width: 90%;
+  }
 
-#btnSub {
- margin:  auto 0 ;
- width: 25%;
- background: rgb(68, 108, 183);
- color: rgb(240, 242, 227);
- border: none;
- border-radius: 10px;
- margin: 0 2em;
-}
+  #btnSub {
+    margin: auto 0;
+    width: 25%;
+    background: rgb(68, 108, 183);
+    color: rgb(240, 242, 227);
+    border: none;
+    border-radius: 10px;
+    margin: 0 2em;
+  }
 
-#btnSub:hover {
-  background: green;
+  #btnSub:hover {
+    background: green;
+  }
 }

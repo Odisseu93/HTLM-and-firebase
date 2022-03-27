@@ -20,6 +20,7 @@ main {
 
 #btnSub {
  margin:  auto 0 ;
+ width: 25%;
  background: rgb(68, 108, 183);
  color: rgb(240, 242, 227);
  border: none;

@@ -20,7 +20,7 @@ const dataBase = firebase.collection("baseDeDados");
 
 //ArrowFunciton para os btn submit
 // const btnSub = document.getElementById("btnSub");
-const btnSub = document.getElementById("btnSub").addEventListener("click", () =>{
+const btnSub = document.getElementById("btnSub").addEventListener("click", () => {
 
   //armazenado os valores dos inputs em váriváveis 
   let nome = document.getElementById("inpName")
@@ -46,7 +46,6 @@ const btnSub = document.getElementById("btnSub").addEventListener("click", () =>
   recarregando a página depois de 0,5 segundos
   https://www.positioniseverything.net/javascript-wait-5-seconds
   */
-  setTimeout(()=>   window.location.reload() ,500);
-
+  setTimeout(() => window.location.reload(), 500);
 
 })

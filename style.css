@@ -134,6 +134,8 @@ Small screens
     text-align: center;
     flex-direction: column;
     height: 88px;
+    background: radial-gradient(#866547bd, #FBD7B7);
+
     justify-content: center;
   }
 

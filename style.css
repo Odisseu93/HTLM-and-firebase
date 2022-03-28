@@ -34,9 +34,9 @@ body {
   form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     padding: 1em;
-    width: 30%;
+    width: 50%;
   }
 
   h1 {
@@ -53,6 +53,8 @@ body {
     margin: 1em;
     text-align: left;
   }
+
+
 
   .inp {
     width: 80%;

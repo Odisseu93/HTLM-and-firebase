@@ -6,132 +6,7 @@ body {
   background: linear-gradient(90deg, #FBD7B7, #FFB4A6);
 }
 
-@media(min-width: 768px) {
-  body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
 
-  header {
-    padding: 1em;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    height: 88px;
-    background: radial-gradient(#866547bd, #FBD7B7);
-    justify-content: center;
-  }
-
-  main {
-    margin: 0 auto;
-    display: flex;
-    /* height: 500px; */
-    /* flex-direction: column; */
-    justify-content: space-between;
-  }
-
-  form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1em;
-    width: 50%;
-  }
-
-  h1 {
-    font-weight: 800;
-    font-size: 1.2em;
-  }
-
-  h2 {
-    font-weight: bold;
-    color: rgb(53, 53, 197);
-  }
-
-  .lblAndInput {
-    margin: 1em;
-    text-align: left;
-  }
-
-
-
-  .inp {
-    width: 80%;
-  }
-
-  #btnSub {
-    margin: auto 0;
-    height: 20px;
-    width: 30%;
-    background: rgb(68, 108, 183);
-    color: rgb(240, 242, 227);
-    border: none;
-    border-radius: 10px;
-    margin: 0 2em;
-  }
-
-  #btnSub:hover {
-    background: green;
-  }
-
-  #all-list h1 {
-    margin-top: 1em;
-    width: 100%;
-    margin: 0 auto;
-  }
-
-  #all-list {
-    display: flex;
-    margin-right: 1em;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    margin: 3%  1%  ;
-    background: #C6ACC7;
-    border-radius: 2%;
-  }
-  .listItens{
-    width: 33.33%;
-    flex-grow: 2;
-  }
-
-  #all-list h1 {
-    text-align: center;
-  }
-
-  li {
-    border: 5px dotted red;
-    margin: 1em;
-  }
-
-  .listItens {
-    display: flex;
-    flex-direction: column;
-
-
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 1em;
-    ;
-  }
-
-  .listItens span {
-    width: 30%;
-    margin: 1em;
-  }
-
-  footer {
-    margin-top: 14em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    background: linear-gradient(90deg, #866547bd 20%, #FBD7B7, #FFB4A6);
-  }
-}
 
 /*
 Small screens
@@ -226,4 +101,136 @@ Small screens
 
   }
 
+}
+
+/*
+tablet
+*/
+@media(min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  header {
+    padding: 1em;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    height: 88px;
+    background: radial-gradient(#866547bd, #FBD7B7);
+    justify-content: center;
+  }
+
+  main {
+    margin: 0 2em;
+    display: flex;
+    /* height: 500px; */
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 1em;
+    width: 50%;
+  }
+
+  h1 {
+    font-weight: 800;
+    font-size: 1.2em;
+  }
+
+  h2 {
+    font-weight: bold;
+    color: rgb(53, 53, 197);
+  }
+
+  .lblAndInput {
+    margin: 1em;
+    text-align: left;
+  }
+
+
+
+  .inp {
+    width: 80%;
+  }
+
+  #btnSub {
+    margin: auto 0;
+    height: 20px;
+    width: 30%;
+    background: rgb(68, 108, 183);
+    color: rgb(240, 242, 227);
+    border: none;
+    border-radius: 10px;
+    margin: 0 2em;
+  }
+
+  #btnSub:hover {
+    background: green;
+  }
+
+  #all-list h1 {
+    margin-top: 1em;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #all-list {
+    display: flex;
+    margin-right: 1em;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 3%  1%  ;
+    background: #C6ACC7;
+    border-radius: 2%;
+  }
+  .listItens{
+    width: 80%;
+    flex-grow: 2;
+    margin: 1em auto;
+  }
+
+  #all-list h1 {
+    text-align: center;
+  }
+
+  li {
+    border: 5px dotted red;
+    margin: 1em;
+  }
+
+  .listItens {
+    display: flex;
+    flex-direction: column;
+
+
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1em;
+    ;
+  }
+
+  .listItens span {
+    width: 30%;
+    margin: 1em;
+  }
+
+  footer {
+    margin-top: 14em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    background: linear-gradient(90deg, #866547bd 20%, #FBD7B7, #FFB4A6);
+  }
 }

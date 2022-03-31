@@ -35,10 +35,9 @@
 - A estrutura em HTML
 - A script em JS
 - Integração do firebase com a página. 
-- O estilo da Página na resoluções de 320 a 425px e acima de 768px
+- Estilo para mobile, laptop e desktop. 
 ***
 ### A fazer
-- Adaptação para mais telas 
 - Refinar o estilo da página
 - Aplicar recursos de visuais na tela do usuário (feedback quando é executado alguma ação)
 - Refatoração do código
